@@ -402,3 +402,56 @@
     box-shadow: 0 9px 20px #2e235e12;
     letter-spacing: 0.5px;
 }
+
+.list-main {
+
+    z-index: 1;
+
+    width: 200px;
+    position: absolute;
+    top: 80px;
+    background: #fff;
+    height: auto;
+    right: 1%;
+    border: 1px solid #e6e9eb !important;
+    border-radius: 8px;
+    box-shadow: 0 9px 20px #2e235e12;
+    letter-spacing: 0.5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.list-item {
+    font-size: 16px;
+    font-weight: 400;
+
+    margin-top: 5px;
+    padding: 5px 14px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #eaeaea;
+    gap: 15px;
+
+    width: 100%;
+
+    cursor: pointer;
+}
+
+.list-item:hover {
+    opacity: 0.5;
+}
+
+.list-item img {
+    height: 21px;
+    width: 30px;
+}
+
+.list-item span {
+    align-self: self-start;
+}

@@ -5,7 +5,7 @@ import Dashboard from "../pages/Dashboard";
 const router = createBrowserRouter([
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: <Dashboard   configInicial="MAIN" />,
   },
   {
     path: "/",
@@ -14,6 +14,26 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Session configInicial="REGISTER" />,
+  },
+  {
+    path: "/dashboard/profile",
+    element: <Dashboard configInicial="PROFILE" />,
+  },
+  {
+    path: "/dashboard/exams",
+    element: <Dashboard configInicial="EXAMS" />,
+  },
+  {
+    path: "/dashboard/pacients",
+    element: <Dashboard configInicial="PACIENTS" />,
+  },
+  {
+    path: "/dashboard/newexams",
+    element: <Dashboard configInicial="REGISTEREXAMS" />,
+  },
+  {
+    path: "/dashboard/newpacients",
+    element: <Dashboard configInicial="REGISTERPACIENTS" />,
   },
 ]);
 

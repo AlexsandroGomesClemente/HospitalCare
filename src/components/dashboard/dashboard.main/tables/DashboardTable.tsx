@@ -1,7 +1,8 @@
 import "../../../../assets/styles/components.css/dashboard.css/Dashboard.component.css";
 import Table from "react-bootstrap/Table";
+import { TableProps } from "../../../../interfaces/dashboard.interface";
 
-function DashboardTable() {
+function DashboardTable(props: TableProps) {
   return (
     <div className="dashboard-table">
       <div className="dashboard-table-card">
@@ -9,9 +10,9 @@ function DashboardTable() {
           <thead>
             <tr>
               <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
+              {props.tableHeader.map((item, index) => (
+                <th key={index}>{item}</th>
+              ))}
             </tr>
           </thead>
           <tbody>

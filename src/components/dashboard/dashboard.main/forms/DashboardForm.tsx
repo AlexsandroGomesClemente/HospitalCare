@@ -1,28 +1,73 @@
 import "../../../../assets/styles/components.css/dashboard.css/Dashboard.component.css";
+import { useEffect, useState } from "react";
 
-function DashboardForm() {
+const exams: string[] = [
+  "Exame",
+  "Responsavel",
+  "Data do Pedido",
+  "Data do Resultado",
+];
+const pacients: string[] = ["Nome", "Causa", "Data de Entrada", "Data de Alta"];
+
+const profile: string[] = ["Foto", "Nome", "Profissão", "Endereço"];
+
+function DashboardForm(props: any) {
+  const [arrayPrincipal, setArrayPrinciapl] = useState<any[]>([]);
+  const [title, setTitle] = useState<string>("");
+  const [action, setAction] = useState<string>("");
+  const [btn, setBtn] = useState<string>("");
+  const [campoOne, setCampoOne] = useState<string>("");
+  const [campoTwo, setCampoTwo] = useState<string>("");
+  const [campoThree, setCampoThree] = useState<string>("");
+  const [campoFour, setCampoFour] = useState<string>("");
+
+  useEffect(() => {
+    switch (props.type) {
+      case "PROFILE":
+        setArrayPrinciapl(profile);
+        setTitle("Perfil");
+        setAction("Editar");
+        setBtn("Editar")
+        break;
+
+      case "REGISTERPACIENT":
+        setArrayPrinciapl(pacients);
+        setTitle("Pacientes");
+        setAction("Novo paciente");
+        setBtn("Registrar")
+        break;
+
+      case "REGISTEREXAM":
+        setArrayPrinciapl(exams);
+        setTitle("Exames");
+        setAction("Novo exame");
+        setBtn("Registrar")
+        break;
+    }
+  }, []);
+
   return (
     <div className="dashboard-form">
       <div className="card-view">
         <div className="card-view-title">
-          <h4>My Profile</h4>
+          <h4>{title}</h4>
         </div>
 
         <div className="card-view-content">
           <div className="card-view-profile">
             <img />
             <span>
-              <h6>Alex</h6>
-              <p>Programador</p>
+              <h6>{arrayPrincipal[0]}</h6>
+              <p>{arrayPrincipal[1]}</p>
             </span>
           </div>
 
           <div className="card-view-info">
-            <label>Email:</label>
+            <label>{arrayPrincipal[2]}</label>
             <span>teste@teste.com</span>
           </div>
           <div className="card-view-info">
-            <label>Endereço:</label>
+            <label>{arrayPrincipal[3]}</label>
             <span>Rua Tal</span>
           </div>
         </div>
@@ -30,7 +75,7 @@ function DashboardForm() {
 
       <div className="card-edit">
         <div className="card-edit-title">
-          <h4>Edit</h4>
+          <h4>{action}</h4>
         </div>
 
         <div className="card-edit-content">
@@ -55,7 +100,7 @@ function DashboardForm() {
               <label>Nome Campo</label>
               <input type="text" />
             </div>
-           
+
             <div className="card-edit-item">
               <label>Nome Campo</label>
               <input type="text" />
@@ -87,7 +132,7 @@ function DashboardForm() {
           </div>
         </div>
 
-        <button className="card-edit-button"> Editar</button>
+        <button className="card-edit-button">{btn}</button>
       </div>
     </div>
   );
