@@ -1,4 +1,4 @@
-import "../../assets/styles/components.css/session.css/CardSession.css";
+import "../../assets/styles/components.css/session.css/CardSession.component.css";
 import CardTitle from "./CardSessionTitle";
 import FormSession from "./FormSession";
 import CardSessionFooter from "./CardSessionFooter";
