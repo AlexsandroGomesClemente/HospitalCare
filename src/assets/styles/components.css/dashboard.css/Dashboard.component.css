@@ -1,0 +1,215 @@
+/*Área Header*/
+.dashboard-header {
+    height: 83.6px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+
+
+    background-color: #F5F5F5;
+}
+
+.dashboard-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.dashboard-logo img {
+    height: 40px;
+    width: 150px;
+}
+
+.dashboard-welcome img {
+    height: 30px;
+    width: 30px;
+
+}
+
+.dashboard-welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+
+.dashboard-welcome span {
+    height: 29px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dashboard-config {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+
+    padding: 40px;
+}
+
+.dashboard-circle {
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    padding: 12px;
+
+    cursor: pointer;
+}
+
+.dashboard-circle:hover {
+    opacity: 0.6;
+}
+
+/*Área Nav*/
+
+.dashboard-nav {
+    height: 53px;
+    width: 100%;
+    background-color: #868686;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+
+    padding: 5px 25px;
+}
+
+.dashboard-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    padding-left: 15px;
+
+    font-size: 14px;
+    color: #fff9;
+}
+
+.dashboard-item:hover {
+    opacity: 0.6;
+}
+
+
+/*Área Principal*/
+
+.dashboard-main {
+    height: 75%;
+    width: 100%;
+    background-color: #F5F5F5;
+
+}
+
+
+.dashboard-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    padding: 10px 40px;
+
+}
+
+.dashboard-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+.dashboard-card-chart {
+    width: 95%;
+    height: 250px;
+
+    border: 1px solid #e6e9eb !important;
+    border-radius: 8px;
+    box-shadow: 0 9px 20px #2e235e12;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-card-chart h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #05a1a1;
+
+    padding: 15px 15px 0 15px;
+}
+
+.dashboard-card {
+    height: 150px;
+    width: 30%;
+
+
+    border: 1px solid #e6e9eb !important;
+    border-radius: 8px;
+    box-shadow: 0 9px 20px #2e235e12;
+    letter-spacing: 0.5px;
+
+}
+
+.dashboard-card h6 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #05a1a1;
+    padding: 15px 15px 0 15px;
+}
+
+.dashboard-card span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #05a1a1;
+    padding: 0 15px 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Área Rodapé*/
+
+.dashboard-footer {
+    height: 40px;
+    background-color: #fff;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #868686;
+    box-shadow: 30px 0 37px #08154251;
+}
+
+
+
+
+
+.dashboard-footer a {
+    text-decoration: none;
+}

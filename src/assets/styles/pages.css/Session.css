@@ -1,0 +1,21 @@
+.session-area {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    background: url("../../img/background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+img {
+    width: 120px;
+    height: 80px;
+
+    margin-bottom: 20px;
+    
+}
