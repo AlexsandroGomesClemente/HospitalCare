@@ -1,22 +1,10 @@
-import Session from "./pages/Session";
-import Dashboard from "./pages/Dashboard";
-import { createBrowserRouter ,RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import router from './routes'
 
 
 function App() {
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Dashboard />,
-
-    },
-    {
-      path: "/login",
-      element: <Session/>,
-      
-    },
-  ]);
+ 
   return (
     <>
      <RouterProvider router={router} />

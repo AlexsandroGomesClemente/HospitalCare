@@ -1,22 +1,71 @@
 import "../../assets/styles/components.css/session.css/CardSession.component.css";
+import {
+  SessionForm,
+  SessionHandelSubmit,
+} from "../../interfaces/session.interface";
+import { useState } from "react";
+import { useNavigate} from "react-router-dom";
 
-function FormSession() {
+function FormSession(props: SessionForm) {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const navigation = useNavigate()
+
+  const handelSubmit: SessionHandelSubmit = (event) => {
+    event?.preventDefault()
+    if (props.formConfig.type === "LOGIN") {
+      if (email !== "" || password !== "") {
+        return navigation(`/dashboard`);
+      }
+    }
+
+    if (props.formConfig.type === "REGISTER") {
+      if (email !== "" || password !== "" || name !== "") {
+        return navigation(`/`);
+      }
+    }
+  };
+
   return (
-    <form className="form-session">
+    <form className="form-session" onSubmit={(event:Event) => handelSubmit(event)}>
+      {props.formConfig.type === "REGISTER" && (
+        <div className="form-input">
+          <label>Nome</label>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            placeholder="nome"
+          />
+        </div>
+      )}
       <div className="form-input">
         <label>Email Address</label>
-        <input type="text" placeholder="email@email.com" />
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          placeholder="email@email.com"
+        />
       </div>
       <div className="form-input">
         <label>Senha</label>
-        <input type="password" placeholder="********" />
+        <input
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type="password"
+          placeholder="********"
+        />
       </div>
 
-     <div className="form-check">
-      <input type="checkbox" />
-      <label>Lembrar senha</label>
-     </div>
-      <button className="form-button" type="submit"> Enviar </button>
+      <div className="form-checks">
+        <input type="checkbox" />
+        <label>{props.formConfig.selector}</label>
+      </div>
+      <button className="form-button" type="submit">
+        {props.formConfig.button}
+      </button>
     </form>
   );
 }
