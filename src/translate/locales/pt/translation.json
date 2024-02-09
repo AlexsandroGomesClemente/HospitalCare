@@ -1,3 +1,10 @@
 {
-    "welcome": "Sejá muito bem-vindo!"
+    "hello": "Olá",
+    "welcome": "Seja bem-vindo ao site!",
+    "pacient": "Pacientes",
+    "newpacient": "Novos Pacientes",
+    "exams": "Exames",
+    "newexams": "Novos Exames",
+    "registers": "Registro de cadastro de exames e pacientes"
+
 }

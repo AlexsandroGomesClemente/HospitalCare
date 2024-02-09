@@ -39,5 +39,6 @@ export interface DashboardMainConfig {
 }
 
 export interface TableProps {
-    tableHeader: string[]
+    tableHeader: string[],
+    type:string,
 }

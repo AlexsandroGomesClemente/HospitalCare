@@ -1,11 +1,11 @@
 import "../../../../assets/styles/components.css/dashboard.css/Dashboard.component.css";
 import Chart from "react-apexcharts";
 
-function DashboardChartSecond() {
+function DashboardChartSecond(props:any) {
   const series1 = [
     {
       name: "Pacientes",
-      data: [31, 40, 28, 51, 42, 109, 200, 310, 400, 450, 480, 500],
+      data: props.config.series
     },
   ];
 
@@ -57,7 +57,7 @@ function DashboardChartSecond() {
       },
     },
 
-    colors: ["#868686"],
+    colors: ["#50c77c"],
     dataLabels: {
       enabled: false,
     },
@@ -98,8 +98,8 @@ function DashboardChartSecond() {
   };
   return (
     <div className="dashboard-card">
-      <h6>Pacientes Registrados</h6>
-      <span>10.000</span>
+      <h6>{props.config.title}</h6>
+      <span>{props.config.qtd}</span>
 
       <Chart
         options={config1}

@@ -1,4 +1,9 @@
 {
     "hello": "Hello",
-    "welcome": "Welcome to our website!"
+    "welcome": "Welcome to our website!",
+    "pacient": "patient",
+    "newpacient": "new patient",
+    "exams": "exams",
+    "newexams": "new exam",
+    "registers": "Exam and patient registration report"
 }

@@ -10,14 +10,14 @@ const exams: string[] = [
   "Responsavel",
   "Data do Pedido",
   "Data do Resultado",
-  "Ações",
+
 ];
 const pacients: string[] = [
   "Nome",
   "Causa",
   "Data de Entrada",
   "Data de Alta",
-  "Ações",
+
 ];
 
 function DashboardMain(props: DashboardMainConfig) {
@@ -37,9 +37,9 @@ function DashboardMain(props: DashboardMainConfig) {
       {props.config.type === "REGISTERPACIENT" && (
         <DashboardForm type={props.config.type} />
       )}
-      {props.config.type === "EXAMS" && <DashboardTable tableHeader={exams} />}
+      {props.config.type === "EXAMS" && <DashboardTable tableHeader={exams} type={"EXAMS"}/>}
       {props.config.type === "PACIENTS" && (
-        <DashboardTable tableHeader={pacients} />
+        <DashboardTable tableHeader={pacients} type={"PACIENTS"} />
       )}
     </div>
   );

@@ -4,13 +4,14 @@ import gif from "../../../assets/img/gif/hand.75bedf03d0bbd960c6ed.gif";
 import { useTranslation } from "react-i18next";
 
 function DashboardHeaderLogo() {
+  const getUser = JSON.parse(localStorage.getItem("user"))
   const { t } = useTranslation();
   return (
     <div className="dashboard-logo">
       <img src={logo} />
       <div className="dashboard-welcome">
         <span>
-          <h2>{t("hello")} Alex</h2>
+          <h2>{t("hello")} {getUser[0].name} </h2>
           <img src={gif} />
         </span>
         <span>{t('welcome')}</span>

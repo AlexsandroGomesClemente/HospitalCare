@@ -76,7 +76,7 @@
 .dashboard-nav {
     height: 53px;
     width: 100%;
-    background-color: #868686;
+    background-color: #50c77c;
 
     display: flex;
     flex-direction: row;
@@ -189,7 +189,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #868686;
+    color: #50c77c;
     box-shadow: 30px 0 37px #08154251;
 }
 
@@ -241,8 +241,8 @@
 }
 
 .card-view-content {
-    border-top: 1px solid #868686;
-    border-bottom: 1px solid #868686;
+    border-top: 1px solid #50c77c;
+    border-bottom: 1px solid #50c77c;
     height: 75%;
 }
 
@@ -258,7 +258,7 @@
 .card-view-profile img {
     height: 90px;
     width: 90px;
-    border: 1px solid #868686;
+    border: 1px solid #50c77c;
     border-radius: 100%;
 }
 
@@ -280,6 +280,7 @@
     justify-content: start;
     align-items: start;
     margin-bottom: 10px;
+    margin-top: 25px;
     padding-left: 15px;
 }
 
@@ -302,8 +303,8 @@
 }
 
 .card-edit-content {
-    border-top: 1px solid #868686;
-    border-bottom: 1px solid #868686;
+    border-top: 1px solid #50c77c;
+    border-bottom: 1px solid #50c77c;
     height: 75%;
 
 
@@ -313,7 +314,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
 }
 

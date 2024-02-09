@@ -1,3 +1,9 @@
 {
-    "welcome": "Welcome to our website!"
+    "hello": "こんにちは",
+    "welcome": "私たちのCRMへようこそ",
+    "pacient": "忍耐強い",
+    "newpacient": "新しい患者さん",
+    "exams": "テスト",
+    "newexams": "新しい試験",
+    "registers": "検査および患者登録レポート"
 }

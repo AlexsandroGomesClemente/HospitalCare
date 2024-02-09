@@ -4,31 +4,46 @@ import {
   SessionHandelSubmit,
 } from "../../interfaces/session.interface";
 import { useState } from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function FormSession(props: SessionForm) {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const navigation = useNavigate()
+  const navigation = useNavigate();
 
   const handelSubmit: SessionHandelSubmit = (event) => {
-    event?.preventDefault()
+    event?.preventDefault();
     if (props.formConfig.type === "LOGIN") {
       if (email !== "" || password !== "") {
-        return navigation(`/dashboard`);
+        const users = JSON.parse(localStorage.getItem("users"));
+        const filterUser = users.filter((user) => user.email === email);
+        localStorage.setItem("user", JSON.stringify(filterUser))
+        if (
+          filterUser.length > 0 &&
+          filterUser[0].email === email &&
+          filterUser[0].password === password
+        )
+        {
+          return navigation(`/dashboard`);
+        }
       }
     }
 
     if (props.formConfig.type === "REGISTER") {
       if (email !== "" || password !== "" || name !== "") {
+        const user: any = [{ name, email, password }];
+        localStorage.setItem("users", JSON.stringify(user));
         return navigation(`/`);
       }
     }
   };
 
   return (
-    <form className="form-session" onSubmit={(event:Event) => handelSubmit(event)}>
+    <form
+      className="form-session"
+      onSubmit={(event: Event) => handelSubmit(event)}
+    >
       {props.formConfig.type === "REGISTER" && (
         <div className="form-input">
           <label>Nome</label>

@@ -1,9 +1,12 @@
 import "../../../assets/styles/components.css/dashboard.css/Dashboard.component.css";
 import { Activity, UserPlus, Hexagon, Users } from "react-feather";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 function DashboardNav() {
   const navigate = useNavigate();
+  const {t} = useTranslation()
   const sendUrl = (url: string) => {
     navigate(url);
     window.location.reload();
@@ -15,22 +18,22 @@ function DashboardNav() {
         className="dashboard-item"
       >
         <Users />
-        <span>Pacientes Cadastrados</span>
+        <span>{t("pacient")}</span>
       </div>
       <div
         className="dashboard-item"
         onClick={() => sendUrl("/dashboard/newpacients")}
       >
         <UserPlus />
-        <span>Cadastro de Pacientes</span>
+        <span>{t('newpacient')}</span>
       </div>
       <div  onClick={() => sendUrl("/dashboard/exams")} className="dashboard-item">
         <Activity />
-        <span>Exames Cadastrados</span>
+        <span>{t('exams')}</span>
       </div>
       <div  onClick={() => sendUrl("/dashboard/newexams")} className="dashboard-item">
         <Hexagon />
-        <span>Cadastro de Exames</span>
+        <span>{t("newexams")}</span>
       </div>
     </nav>
   );

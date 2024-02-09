@@ -1,7 +1,9 @@
 import "../../../../assets/styles/components.css/dashboard.css/Dashboard.component.css";
 import Chart from "react-apexcharts";
+import { useTranslation } from "react-i18next";
 
 function DashboardChatMain() {
+  const {t} = useTranslation()
   const series = [
     {
       name: "Pacientes",
@@ -52,7 +54,7 @@ function DashboardChatMain() {
       },
     },
 
-    colors: ["#868686", "#FFAE1A"],
+    colors: ["#50c77c", "#FFAE1A"],
     dataLabels: {
       enabled: true,
     },
@@ -92,7 +94,7 @@ function DashboardChatMain() {
   };
   return (
     <div className="dashboard-card-chart">
-      <h5>Relatorio de cadastros</h5>
+      <h5>{t('registers')}</h5>
       <Chart
         options={config}
         series={series}
