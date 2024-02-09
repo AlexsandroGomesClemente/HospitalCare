@@ -1,4 +1,4 @@
-import "../../../assets/styles/components.css/dashboard.css/Dashboard.component.css";
+import "../../../../assets/styles/components.css/dashboard.css/Dashboard.component.css";
 import Chart from "react-apexcharts";
 
 function DashboardChatMain() {

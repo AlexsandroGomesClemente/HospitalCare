@@ -179,19 +179,6 @@
     padding: 0 15px 0 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Área Rodapé*/
 
 .dashboard-footer {
@@ -206,10 +193,189 @@
     box-shadow: 30px 0 37px #08154251;
 }
 
-
-
-
-
 .dashboard-footer a {
     text-decoration: none;
+}
+
+
+
+/*Área Dashboard Form*/
+
+.dashboard-form {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.card-view {
+    width: 25%;
+    height: 100%;
+
+
+
+    border: 1px solid #e6e9eb !important;
+    border-radius: 8px;
+    box-shadow: 0 9px 20px #2e235e12;
+    letter-spacing: 0.5px;
+}
+
+.card-edit {
+    width: 65%;
+    height: 100%;
+
+
+    border: 1px solid #e6e9eb !important;
+    border-radius: 8px;
+    box-shadow: 0 9px 20px #2e235e12;
+    letter-spacing: 0.5px;
+}
+
+.card-view-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 15px;
+}
+
+.card-view-content {
+    border-top: 1px solid #868686;
+    border-bottom: 1px solid #868686;
+    height: 75%;
+}
+
+.card-view-profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 25px;
+    gap: 15px;
+}
+
+.card-view-profile img {
+    height: 90px;
+    width: 90px;
+    border: 1px solid #868686;
+    border-radius: 100%;
+}
+
+.card-view-profile h6 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.card-view-profile p {
+    font-size: 14px;
+    letter-spacing: 1.7px;
+    line-height: 1.7;
+}
+
+.card-view-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.card-view-info label {
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+}
+
+.card-view-info span {
+    font-size: 14px;
+    letter-spacing: 1.7px;
+    line-height: 1.7;
+}
+
+.card-edit-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.card-edit-content {
+    border-top: 1px solid #868686;
+    border-bottom: 1px solid #868686;
+    height: 75%;
+
+
+}
+
+.card-edit-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+.card-edit-item {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.card-edit-item label {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+
+    margin: 20px 0 10px;
+}
+
+.card-edit-item input {
+    font-size: 14px;
+    width: 100%;
+    height: 30px;
+
+    padding: 10px;
+
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    color: #898989;
+    box-shadow: none;
+    border-color: #e6e9eb;
+    background-color: #0066661a;
+    transition: all .3s ease;
+}
+
+.card-edit-item input:focus {
+    outline: #898989;
+}
+
+.card-edit-button {
+
+    position: relative;
+    left: 86.5%;
+    top: 1%;
+
+    justify-content: center;
+    align-items: center;
+    height: 29.6px;
+    width: 114px;
+
+    margin-bottom: 35px;
+
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 400;
+
+    border: none;
+    border-radius: 5px;
+    background-color: #006666;
+    color: white;
+    cursor: pointer;
+}
+
+.card-edit-button:hover {
+    opacity: 0.8;
 }
